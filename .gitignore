@@ -1,0 +1,63 @@
+# ==========================================
+# STM32CubeIDE & Eclipse Build Artifacts
+# ==========================================
+
+# Object files (compiled binaries)
+*.o
+*.d
+
+# Linker files
+*.map
+*.lnk
+
+# Binary outputs (Hex, Bin, ELF, AXF)
+*.hex
+*.bin
+*.elf
+*.axf
+
+# STM32CubeIDE specific build folders
+*.out
+Debug/
+Release/
+
+# ==========================================
+# Eclipse / CDT Specific Files
+# ==========================================
+
+# Eclipse workspace metadata
+.cproject
+.project
+.settings/
+
+# Eclipse build folders
+.buildpath
+.metadata/
+
+# ==========================================
+# Temporary & IDE Files
+# ==========================================
+
+# Workspace-specific temporary data
+.freebuff/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor temp files
+*.swp
+*.swo
+*~
+
+# ==========================================
+# STM32CubeProgrammer & Debug Files
+# ==========================================
+
+# STM32CubeProgrammer logs
+*.log
