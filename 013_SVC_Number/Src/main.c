@@ -15,9 +15,17 @@ let's say SVC #0x5
 
 int main(void)
 {
-	__asm volatile ("SVC #0x08"); // This causes SVC Exception
+	__asm volatile ("SVC #25"); // This causes SVC Exception
 
-	while(1);
+	//register uint32_t data __asm("r0");
+
+	uint32_t data;
+
+	__asm volatile ("MOV %0,R0": "=r"(data) ::);
+
+	printf(" data = %ld\n",data);
+
+	for(;;);
 }
 
 __attribute__ ((naked)) void SVC_Handler(void)
@@ -42,5 +50,10 @@ void SVC_Handler_C(uint32_t *pBaseofStackFrame)
 	//3. Extract the SVC number (LSB of the opcode
 	uint8_t svc_number = *pReturnAddr;
 	printf("SVC Number is : %d",svc_number);
+
+	svc_number += 4;
+
+	pBaseofStackFrame[0] = svc_number;
+
 
 }
