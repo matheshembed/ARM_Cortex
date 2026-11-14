@@ -25,11 +25,6 @@ Release/
 # Eclipse / CDT Specific Files
 # ==========================================
 
-# Eclipse workspace metadata
-.cproject
-.project
-.settings/
-
 # Eclipse build folders
 .buildpath
 .metadata/
